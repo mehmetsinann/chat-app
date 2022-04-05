@@ -1,0 +1,17 @@
+<% if @single_room %>
+  <div class="relative flex flex-col px-2 text-white border-r border-l bg-gray-800 md:w-1/2 w-full mx-auto max-h-screen justify-between">
+    <div class="absolute top-2 left-2 z-10">
+      <%= link_to '⬅', rooms_path, :class => "text-2xl" %>
+    </div>
+
+    <h4 class="sticky top-0 left 0 w-full bg-gray-800 text-center text-3xl font-semibold mt-2"> <%= @single_room.name %></h4>
+
+    <%= turbo_stream_from @single_room %>
+    <div class="overflow-y-scroll px-4 flex flex-col-reverse h-full">
+      <div id="messages">
+        <%= render @messages %>
+      </div>
+    </div>
+    <%= render partial: 'messages/new_message_form' %>
+  </div>
+<% end %>

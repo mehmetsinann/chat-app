@@ -1,0 +1,4 @@
+<div id="room_<%= room.id %>" class="relative flex flex-row justify-between">
+  <%= link_to room.name, room, :class => "text-white hover:underline w-full text-center" %>
+  <%= render :partial => 'layouts/delete_button', :locals => {obj:room} %>
+</div>

@@ -1,0 +1,20 @@
+<div class="mx-auto relative my-auto md:w-1/3 w-full border border-gray-400 rounded-lg pb-2 h-80 bg-sky-900 overflow-y-scroll">
+  <div class="sticky relative">
+    <div class="absolute left-2 z-10 text-white">
+      <%= link_to '⬅', rooms_path, :class => "text-2xl" %>
+    </div>
+    <p class="text-white text-center border-b border-gray-400 top-0 inset-x-1 text-xl font-normal mb-2 bg-sky-900 w-full py-1">All Users</p>
+  </div>
+  <%= turbo_stream_from "users" %>
+  <div id="users" class=" space-y-2">
+    <% @users.each do |user| %>
+      <div id="user_<%= user.id %>" class="relative flex flex-row justify-center px-2">
+        <p class="text-gray-300 w-full">
+          <%= link_to user.username, user, :class => "text-white hover:underline font-semibold" %>
+          <%= render :partial => 'layouts/delete_button', :locals => {obj:user} %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
+</div>

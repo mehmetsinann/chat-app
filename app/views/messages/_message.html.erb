@@ -1,0 +1,20 @@
+<div id="message_<%= message.id %>" class="cont-<%= message.user.id %> rounded-lg my-2 flex">
+  <div class="msg-<%= message.user.id %> rounded-lg bg-gray-600 inline-block p-2" >
+    <% unless message.room.is_private %>
+      <h6 class="name-<%= message.user.id %> font-semibold text-lg">
+        <% if message.user %>
+          <%= link_to message.user.username, message.user %>
+        <% end %>
+      </h6>
+    <% end %>
+    <div class="flex flex-row align-center">
+      <%= message.content %>
+      <div class="delete-icon-<%= message.user.id %> hidden border border-white inline-block ml-2 rounded-full hover:bg-gray-800 hover:border-gray-800 duration-200">
+        <%= link_to image_tag("delete.png",:class => "w-6 h-6 p-1"),[message.user, message] , data: {
+          turbo_method: :delete,
+          turbo_confirm: "Are you sure?"
+        } %>
+      </div>
+    </div>
+  </div>
+</div>

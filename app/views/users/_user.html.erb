@@ -1,0 +1,6 @@
+<div id="user_<%= user.id %>" class="relative flex flex-row justify-center px-2">
+  <p class="text-gray-300 w-full">
+    <%= link_to user.username, user, :class => "text-white hover:underline font-semibold" %> -
+    <%= user.last_seen_at.nil? ? "Never seen" : time_ago_in_words(user.last_seen_at) %>
+  </p>
+</div>

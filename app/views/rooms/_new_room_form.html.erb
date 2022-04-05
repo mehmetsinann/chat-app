@@ -1,0 +1,12 @@
+<%= form_with(model: @room, remote:true,
+              data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }) do |f| %>
+  <div class="mb-8 text-white flex flex-col text-center border border-gray-400 rounded-lg px-12 py-4 mt-8 bg-sky-900 space-y-4">
+    <%= f.label :name, "Add a new room", :class=>"font-light text-lg" %>
+    <div class="flex md:flex-row flex-col w-full md:space-x-2 md:space-y-0 space-y-2">
+      <%= f.text_field :name, class: "rounded-lg md:w-3/4 w-full text-sky-900", autocomplete: 'off' %>
+      <div class="md:w-1/4 w-full border border-white rounded-lg text-white hover:bg-white hover:text-sky-900 duration-200">
+        <%= f.submit 'Add', :class=>"hover:cursor-pointer w-full h-full" %>
+      </div>
+    </div>
+  </div>
+<% end %>

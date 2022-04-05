@@ -1,0 +1,25 @@
+<div class="justify-center flex flex-col md:my-auto md:mx-auto border border-gray-600 md:rounded-xl py-12 md:px-16 px-8 bg-sky-900 md:w-1/2 w-full text-white">
+  <div class="mx-auto relative w-full">
+    <h1 class="text-2xl font-semibold text-center mb-4">Sign Up</h1>
+    <%= form_with(model: @user, local: true) do |f| %>
+      <div class="text-red-500 font-semibold mb-4">
+        <%= render partial: "layouts/form_errors", locals: { object: @user } %>
+      </div>
+
+      <div class="flex flex-col space-y-4">
+        <div class="flex flex-col">
+          <%= f.label :username, 'Username' %>
+          <%= f.text_field :username, :class=>"rounded-xl w-full text-sky-900" %>
+        </div>
+        <div class="flex flex-col">
+          <%= f.label :password, 'Password' %>
+          <%= f.password_field :password,:class=>"rounded-xl w-full text-sky-900" %>
+        </div>
+        <%= f.submit 'Create User', :class=>"py-2 border border-white rounded-lg hover:bg-white hover:text-sky-900 duration-200 hover:cursor-pointer" %>
+      </div>
+    <% end %>
+  </div>
+  <div class="mt-4 text-center">
+    <p>Do you have an account? <%= link_to 'Sign in',signin_path, :class => "text-blue-300 hover:underline" %></p>
+  </div>
+</div>
