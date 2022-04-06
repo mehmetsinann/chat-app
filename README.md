@@ -1,6 +1,6 @@
 # README
 
-Kullanıcıların hesap oluşturarak giriş yapabildiği public veya kullanıcılar arası private konuşabildikleri bir chat uygulaması
+Kullanıcıların hesap oluşturarak giriş yapabildiği public veya kullanıcılar arası private konuşabildikleri bir chat uygulaması. 
 Stillendirme için tailwindcss kullandım.
 
 Sign in ve sign up sayfaları:
