@@ -8,7 +8,7 @@ Sign in ve sign up sayfaları:
 ![sign-up](https://user-images.githubusercontent.com/73042487/161972080-f12c331b-53e6-4f2f-bf05-51a4c18350cf.png)
 
 Admin Sayfaları:
-Yalnızca admin kullanıcı ve public odaları silme yetkisine sahip.
+Yalnızca admin kullanıcı ve public odaları silme aynı zamanda public oda ekleme yetkisine sahip.
 ![admin-home-page](https://user-images.githubusercontent.com/73042487/161971906-376cf6db-1be9-46b4-ba52-affd9a9985ab.png)
 ![admin-delete-user](https://user-images.githubusercontent.com/73042487/161971980-78fe4164-a19f-49a7-ab30-db280a00ca17.png)
 
