@@ -1,1 +1,4 @@
-web: bundle exec passenger start -p $PORT --max-pool-size 3
+web: bundle exec ruby web.rb -p $PORT
+web: bundle exec unicorn -p $PORT
+web: bundle exec puma -p $PORT
+web: bundle exec thin start -p $PORT
