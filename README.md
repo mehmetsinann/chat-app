@@ -1,18 +1,40 @@
-# README
+# Chat Application
 
-Kullanıcıların hesap oluşturarak giriş yapabildiği public veya kullanıcılar arası private konuşabildikleri bir chat uygulaması. 
-Stillendirme için tailwindcss kullandım.
+This web application allows users to engage in private chat conversations with active users and participate in public chat rooms. The application is developed using Ruby on Rails.
 
-Sign in ve sign up sayfaları:
-![sign-in](https://user-images.githubusercontent.com/73042487/161972077-e82337bd-8b18-442a-b413-771f191c9979.png)
-![sign-up](https://user-images.githubusercontent.com/73042487/161972080-f12c331b-53e6-4f2f-bf05-51a4c18350cf.png)
+## Features
 
-Admin Sayfaları:
-Yalnızca admin kullanıcı ve public odaları silme aynı zamanda public oda ekleme yetkisine sahip.
-![admin-home-page](https://user-images.githubusercontent.com/73042487/161971906-376cf6db-1be9-46b4-ba52-affd9a9985ab.png)
-![admin-delete-user](https://user-images.githubusercontent.com/73042487/161971980-78fe4164-a19f-49a7-ab30-db280a00ca17.png)
+Private Chat: Users can view a list of active users and initiate private chat conversations with them.
+Public Chat Rooms: Users can join public chat rooms and participate in group chat discussions.
+Real-Time Messaging: The application utilizes real-time messaging to provide instant communication between users.
+User Authentication: Users can create accounts, log in, and customize their profile.
 
-Diğer sayfalar:
-![private-chat](https://user-images.githubusercontent.com/73042487/161972143-4d0ffedc-3a1c-4bbf-9d05-e9cbdb01e717.png)
-![public-chat](https://user-images.githubusercontent.com/73042487/161972151-da8a106f-4876-43c3-884b-49e14dfa35d1.png)
-![user-home-page](https://user-images.githubusercontent.com/73042487/161972155-aba8e878-2333-4577-9df6-720fa34d2646.png)
+## Installation
+
+To run the application locally, follow these steps:
+
+1. Clone the repository: `git clone https://github.com/mehmetsinann/chat-app.git`
+2. Navigate to the project directory: `cd chat-app`
+3. Install the necessary dependencies: `bundle install`
+4. Set up the database: `rails db:create` and `rails db:migrate`
+5. Start the Rails server: `rails server`
+6. Open your browser and visit: `http://localhost:3000`
+
+## Usage
+
+1. Upon opening the application, you will be presented with two tabs: "Private Chat" and "Public Chat Rooms".
+2. Select the "Private Chat" tab to view a list of active users who are currently available for private conversations.
+3. Click on a user's name to initiate a private chat with them. The chat interface will open, allowing you to exchange messages in real time.
+4. Select the "Public Chat Rooms" tab to view a list of available chat rooms.
+5. Click on a chat room to join and participate in the group chat discussion.
+6. In both private and public chats, you can send messages, view message history, and interact with other users.
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes and commit them: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Submit a pull request.
